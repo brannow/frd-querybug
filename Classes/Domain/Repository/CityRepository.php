@@ -45,19 +45,16 @@ class CityRepository extends Repository
     public function findByStore(?Store $store): QueryResultInterface
     {
         $query = $this->createQuery();
-        $constrain = [
-            $query->equals('deleted', 0)
-        ];
 
         if ($store) {
-            $constrain[] = $query->logicalOr([
+            $constrain = $query->logicalOr([
                 $query->contains('innerZone.stores', $store),
                 $query->contains('outerZone.stores', $store)
             ]);
+            $query->matching(
+                $constrain
+            );
         }
-        $query->matching(
-            $query->logicalAnd($constrain)
-        );
 
         return $query->execute();
     }

@@ -1,0 +1,21 @@
+{
+    "name": "frd/frd-querybug",
+    "type": "typo3-cms-extension",
+    "description": "Sample Ext for an Join Bug in Query",
+    "author": [
+        {
+            "name": "Benjamin Rannow",
+            "email": "b.rannow@familie-redlich.de",
+            "role": "Developer",
+            "homepage": "http://www.familie-redlich.de"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "FRD\\FrdQuerybug\\": "Classes"
+        }
+    }
+}

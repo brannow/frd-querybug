@@ -1,0 +1,35 @@
+{
+  "name": "frd/frd-querybug",
+  "type": "typo3-cms-extension",
+  "description": "Sample Ext for an Join Bug in Query",
+  "minimum-stability": "dev",
+  "keywords": [
+    "TYPO3",
+    "SBahn",
+    "Stations",
+    "Extension"
+  ],
+  "homepage": "http://www.s-bahn-berlin.de",
+  "authors": [
+    {
+      "name": "Benjamin Rannow",
+      "email": "b.rannow@familie-redlich.de",
+      "role": "Developer",
+      "homepage": "http://www.familie-redlich.de"
+    }
+  ],
+  "require": {
+    "typo3/cms": "^8.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.0"
+  },
+  "autoload": {
+    "classmap": [
+      "Classes/"
+    ],
+    "psr-4": {
+      "FRD\\FrdQuerybug\\": "Classes"
+    }
+  }
+}

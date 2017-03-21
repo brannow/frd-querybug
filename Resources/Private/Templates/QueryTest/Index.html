@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Backend"/>
+
+<f:section name="content">
+    <h1>CREATE TEST DATA</h1>
+    Create test DataSet under chosen Page
+    <f:form action="create">
+        <f:form.submit value="Create" />
+    </f:form>
+
+    <br /><br />
+
+    <h1>Expected RESULT</h1>
+    <f:for each="{expectedCities}" as="city">
+        <div>
+            {city.title}
+        </div>
+    </f:for>
+
+    <br /><br />
+
+    <h1>Actual RESULT</h1>
+    <f:for each="{cities}" as="city">
+        <div>
+            {city.title}
+        </div>
+    </f:for>
+</f:section>
+</html>

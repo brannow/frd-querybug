@@ -50,9 +50,8 @@ class QueryTestController extends ActionController
 
         // default
         $cities = $this->cityRepository->globalMode()->findByStore($store);
-        $expectedCities = $this->cityRepository->globalMode()->findAll();
         $this->view->assign('cities', $cities);
-        $this->view->assign('expectedCities', $expectedCities);
+        $this->view->assign('expectedCities', array_unique($cities->toArray()));
     }
 
     /**
